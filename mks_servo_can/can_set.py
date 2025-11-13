@@ -104,7 +104,7 @@ def wait_for_calibration(self):
         can.CanError: If there is an error in sending the CAN message.
         calibration_timeout_error: If the calibration took longer than the expected time.
     """
-    if self._calibration_status == CalibrationResult.Unkown:
+    if self._calibration_status == CalibrationResult.Unknown:
         raise calibration_not_running("")
 
     start_time = time.perf_counter()
@@ -443,7 +443,7 @@ def wait_for_go_home(self):
         can.CanError: If there is an error in sending the CAN message.
         go_home_timeout_error: If the go home operation took longer than the expected time.
     """
-    if self._homing_status == GoHomeResult.Unkown:
+    if self._homing_status == GoHomeResult.Unknown:
         raise calibration_not_running("")
 
     start_time = time.perf_counter()
